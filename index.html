@@ -78,17 +78,39 @@
 		<div class="row">
 			<div id="post-area" class="col span_12">
 				<p>At anchor, we make a lot of things. Here's a showcase of just some of them</p>
-				<h2><strong>Vaultaire - Ceph based, immutable TSDB</strong></h2>
-					<p>Most systems that store server metrics are lossy: they average data out as they compact them in order to save space. If you're planning on doing serious analytics or predictive modelling, however, you can't be throwing away data points. We wanted a place to put metrics that wasn't lossy, allows arbitrary range querying, and would scale out without bothering anybody.</p>
-					<p>Vaultaire is a data vault for system metrics, backed onto Ceph. We use it internally to store system metrics and to derive IP traffic usage for billing. We're looking forward to letting clients write to it as well.</p>
-					<ul>
-						<li><a href="https://github.com/anchor/vaultaire">read more</a></li>
-					</ul>
+				<h2><strong>Vaultaire — A Data Vault for Metrics, backed onto Ceph</strong></h2>
+					<p>
+Before you can do serious analytics you need to have serious data. You can't go
+averaging it away just to save space; you need the raw data.
+					</p>
+
+					<p>
+Vaultaire is a distributed metrics store. It is fault tolerant, performs well,
+is space efficient, and — since it stores data directly in Ceph — scales
+horizontally as your cluster grows.
+					</p>
+
+					<p>
+We use it internally to store system metrics and to derive IP traffic usage for
+billing. We're looking forward to letting clients write to it as well.
+<a href="https://github.com/anchor/vaultaire">Read more</a>.
+					</p>
 					
 
-					<h2>Machiavelli - Graph all the things</h2>
+					<h2>Machiavelli — Graph all the things</h2>
 
-					<p>Machiavelli is a Ruby on Rails application for taking any arbitrarily defined data source, and feeding it into any arbitrarily defined graphing library.</p>
+					<p>
+Machiavelli is a Ruby on Rails application that can be used to query different
+backend datastores, and then graph any arbitrarily defined metric from that
+source. It allows cross-source graphing, multiple visualisation styles, and
+sharing a graph is as easy as copying the URL. 
+					</p>
+
+					<p>
+Backends already written include flat CSV files, simple JSON feeds, and
+time-series datastores such as Graphite, RRD, New Relic, and Vaultaire.
+					</p>
+
 					<ul>
 						<li><a href="https://anchor.github.io/machiavelli">read more</a></li>
 					</ul>
